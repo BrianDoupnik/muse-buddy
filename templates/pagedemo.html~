@@ -1,0 +1,25 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/template6.css') }}"/>
+<title> Muse Buddy </title>
+
+<h1> Welcome to Muse Buddy! </h1>
+<hr />
+{% if name %}
+<p> Hi {{ name }}, welcome to Muse Buddy!  This is a free web app that allows you to more easily write poetry by supplying context-sensitive rhymes.  Right now, it rhymes in couplets, but there's future work planned to allow other rhyme schemes as well! </p>
+{% else %}
+<p> Hi, welcome to Muse Buddy!  This is a free web app that allows you to more easily write poetry by supplying context-sensitive rhymes.  Right now, it rhymes in couplets, but there's future work planned to allow other rhyme schemes as well! </p>
+{% endif %}
+
+{% if lastLine %}
+<form>
+  Example line <input type="text" name="user_line" size="100" value="{{lastLine}}" autofocus/>
+</form>
+{% else %}
+<form>
+  Example line <input type="text" name="user_line" size="100" autofocus/>
+</form>
+{% endif %}
+
+<hr />
+
+<p> Rhymed word | {{ rhyme }} </p>

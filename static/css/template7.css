@@ -1,0 +1,25 @@
+body {
+    color: white;
+    text-align: center;
+    background-color: #161616;
+}
+
+h1 {
+    font-size: xx-large;
+}
+p {
+    font-size: large;
+}
+
+input {
+    color: #161616;
+    background-color: #ffa366;
+    border: none;
+    padding: 12px 20px;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 4px solid #cc3300;
+}
